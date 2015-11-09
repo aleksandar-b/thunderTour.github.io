@@ -65,12 +65,13 @@ border-color: transparent rgba(1, 74, 111, 0.99) transparent transparent;
   float: left;
   background-color:rgba(5, 27, 38, 0.480);
   background-color:#00334D;
-  background-color: red;
+  background-color: orange;
 
   text-align: center;
   border-radius: 3px;
   cursor: pointer;
   padding: 4px;
+  padding-bottom: 10px;
   font-size: 0.8em;
   box-shadow: rgba(0, 0, 0, 0.8)  0 1px 3px;
   
