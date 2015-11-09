@@ -60,12 +60,11 @@ border-color: transparent rgba(1, 74, 111, 0.99) transparent transparent;
   tap-highlight-color: rgba(0,0,0,0);
   margin-right: 5px ;
   margin-top: 9px ;
-  margin-bottom: 20px ;
   width: 15%;
   float: left;
   background-color:rgba(5, 27, 38, 0.480);
   background-color:#00334D;
-  background-color: purple;
+  background-color: yellow;
 
   text-align: center;
   border-radius: 3px;
@@ -106,7 +105,7 @@ margin-top: 19px;
   
   color: white;
   padding: 10px;
-  padding-bottom:35px;
+  padding-bottom:35px !important;
   font-size: 0.85em;
   border-radius: 4px;
 
