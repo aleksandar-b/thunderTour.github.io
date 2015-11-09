@@ -3,7 +3,7 @@
   width:20%;
   cursor:pointer;
   z-index:9999;
-  
+  background: red;
 }
 
 .triangleleft{
