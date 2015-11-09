@@ -3,8 +3,7 @@
   width:20%;
   cursor:pointer;
   z-index:9999;
-  background: red;
-}
+  }
 
 .triangleleft{
   position:absolute;
@@ -78,8 +77,8 @@ border-color: transparent rgba(1, 74, 111, 0.99) transparent transparent;
 }
 .krug{
 
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 205px;
   border:1px solid rgba(5, 20, 28, 0.4);
 background-color: transparent;
