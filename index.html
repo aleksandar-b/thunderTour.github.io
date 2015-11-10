@@ -315,6 +315,19 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
   <script >
     
 
+ 
+
+
+
+document.getElementsByClassName('startTour')[0].addEventListener('click', function(){
+       //remove popup 
+
+
+if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
+       document.getElementsByClassName('popup')[0].remove();
+       document.getElementsByClassName('div')[0].remove();
+}
+
  Tour({
 
    steps:[
@@ -340,19 +353,6 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
 
    });
 
-
-
-
-document.getElementsByClassName('startTour')[0].addEventListener('click', function(){
-       //remove popup 
-
-
-if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
-       document.getElementsByClassName('popup')[0].remove();
-       document.getElementsByClassName('div')[0].remove();
-}
-
- Tour(arg, 0);
        
 });
 
