@@ -249,19 +249,7 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
      var lengthKrug = krug.length;
      
      
-document.getElementsByClassName('startTour')[0].addEventListener('click', function(){
-       //remove popup 
 
-
-if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
-       document.getElementsByClassName('popup')[0].remove();
-       document.getElementsByClassName('div')[0].remove();
-}
-
- tour(arg, 0);
-return;
-       
-});
 
 
 
@@ -299,6 +287,10 @@ return;
        }else{
          //end popup and scroll to top
          window.scrollTo(0,0);
+         if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
+       document.getElementsByClassName('popup')[0].remove();
+       document.getElementsByClassName('div')[0].remove();
+}
        return;
        }
 
@@ -349,6 +341,20 @@ return;
    });
 
 
+
+
+document.getElementsByClassName('startTour')[0].addEventListener('click', function(){
+       //remove popup 
+
+
+if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
+       document.getElementsByClassName('popup')[0].remove();
+       document.getElementsByClassName('div')[0].remove();
+}
+
+ Tour(arg, 0);
+       
+});
 
   </script>
   </body>
