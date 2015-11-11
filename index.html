@@ -182,6 +182,11 @@ f.innerHTML ='<div class="popup">'+ content+triangle+ht+'</div>';
 var h3 = document.getElementsByTagName('body')[0];
           h3.appendChild(f);
      
+
+     if(counter === length-1){
+            document.getElementsByClassName('next')[0].innerHTML = 'Close';
+           
+         }
      document.getElementsByClassName('krug')[length-1-counter].style.background = '#00334D';
      
      // width of target element
