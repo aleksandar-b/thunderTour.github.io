@@ -210,7 +210,7 @@ var h3 = document.getElementsByTagName('body')[0];
      
      
      if(side === 'right'){
-       
+       console.log(absolutePosX, width);
     f.style.left = (absolutePosX+width)+ marginOffset+"px";
        f.style.top =absolutePos-(bottom-top)/2 +height/2+"px";
       document.getElementsByClassName('popup')[0].style.animationName = 'fadeInRight';
@@ -272,7 +272,7 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
          firstOne =   document.querySelector(klasForward); 
        }
 
-              
+
        counter++;
        
        if(counter < length){
