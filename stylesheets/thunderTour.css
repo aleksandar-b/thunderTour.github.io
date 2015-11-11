@@ -13,7 +13,7 @@
 height: 0;
 border-style: solid;
 border-width: 10px 0 10px 11px;
-border-color: transparent transparent transparent rgba(1, 74, 111, 0.99);
+border-color: transparent transparent transparent #005F8F;
   
 }
 
@@ -25,7 +25,7 @@ border-color: transparent transparent transparent rgba(1, 74, 111, 0.99);
 height: 0;
 border-style: solid;
 border-width: 0 11.5px 16px 11.5px;
-border-color: transparent transparent rgba(1, 74, 111, 0.99) transparent;
+border-color: transparent transparent #005F8F transparent;
 
   
 }
@@ -38,7 +38,7 @@ border-color: transparent transparent rgba(1, 74, 111, 0.99) transparent;
 height: 0;
 border-style: solid;
 border-width: 16px 10px 0 10px;
-border-color: rgba(1, 74, 111, 0.99) transparent transparent transparent;
+border-color: #005F8F transparent transparent transparent;
 
   
 }
@@ -52,7 +52,7 @@ position: absolute;
 height: 0;
 border-style: solid;
 border-width: 10px 15px 10px 0;
-border-color: transparent rgba(1, 74, 111, 0.99) transparent transparent;
+border-color: transparent #005F8F transparent transparent;
     
 }
 .next{
