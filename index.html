@@ -192,6 +192,11 @@ var h3 = document.getElementsByTagName('body')[0];
      // width of target element
           var width = absolutePosR - absolutePosX;
    
+
+   if (width === 0){
+var id = firstOne.id;
+
+   }
      
      // right position of popup
       var right = document.getElementsByClassName('popup')[0].getBoundingClientRect().right + window.scrollX;
@@ -354,6 +359,10 @@ if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassNa
            side:'bottom'},
 
            {selector:'.gth2',
+          content:'This is sample content. Download library here.',
+           side:'right'},
+
+           {selector:'.tre',
           content:'This is sample content. Download library here.',
            side:'right'}
 
