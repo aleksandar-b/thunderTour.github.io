@@ -194,8 +194,11 @@ var h3 = document.getElementsByTagName('body')[0];
    
 
    if (width === 0){
-var id = firstOne.id;
 
+var id = document.getElementById(firstOne.id);
+console.log(id);
+var rect = id.getBoundingClientRect();
+console.log(rect);
    }
      
      // right position of popup
