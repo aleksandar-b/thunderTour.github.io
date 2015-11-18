@@ -116,13 +116,13 @@ margin-bottom: 6px;
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-40px);
+    transform: translate3d(-40px,0px,0px);
     
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translate3d(0px,0px,0px);
     
   }
 }
@@ -130,13 +130,13 @@ margin-bottom: 6px;
 @keyframes fadeInRight {
   0% {
     opacity: 0;
-    transform: translateX(40px);
+    transform: translate3d(40px,0px,0px);
     
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0px);
+    transform: translate3d(0px,0px,0px);
     
   }
 }
@@ -144,13 +144,13 @@ margin-bottom: 6px;
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translate3d(0px,40px,0px);
     
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translate3d(0px,0px,0px);
     
   }
 }
@@ -158,13 +158,13 @@ margin-bottom: 6px;
 @keyframes fadeInTop {
   0% {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translate3d(0px,-40px,0px);
     
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translate3d(0px,0px,0px);
     
   }
 }
