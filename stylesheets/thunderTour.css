@@ -98,8 +98,7 @@ margin-bottom: 6px;
 }
 
 .popup{
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+
   animation-fill-mode: both;
     font-family: 'Source Code Pro' ;
  background-color: #005F8F;
