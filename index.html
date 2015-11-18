@@ -278,11 +278,16 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
        
        counter++;
        
+
+
+       var rectLast = firstOne.getBoundingClientRect();
+    absolutePos = rectLast.top+ window.scrollY;
+            var  relPos = rectLast.top;
+
+
        if(counter < length){
         //firstOne = firstOne.nextSibling.nextSibling;
          
-         absolutePos = Rect.top + window.scrollY;
-     var  relPos = Rect.top;
          
          if(absolutePos > window.innerHeight){
 
