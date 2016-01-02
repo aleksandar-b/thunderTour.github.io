@@ -14,6 +14,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">Thunder Tour JS</h1>
+        <h2><div class="svghed"><svg version="1.1" class="" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="37.191px" height="49.535px" viewBox="0 0 17.191 29.535" enable-background="new 0 0 17.191 29.535" xml:space="preserve"><polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FCCF0F" points="17.191,0 1.438,15.457 6.365,15.466 0,29.535 17.166,12.907 11.773,12.661 "></polygon></svg></div></h2>
       <h2 class="project-tagline">Thunder tour is a lightweight Javascript library for creating guided tours through your app.</a></h2>
       <a href="https://github.com/samosale/thunderTour" class="btn gth">View on GitHub</a>
       <a href="https://github.com/samosale/thunderTour/archive/master.zip" class="btn gth1">Download .zip</a>
@@ -226,15 +227,15 @@ document.querySelector('.popup').appendChild(wrapper);
        audio.className = 'thunderAudio';
   document.getElementsByTagName('body')[0].appendChild(audio);
 audio.src ='https://dl.dropboxusercontent.com/content_link/g9PwefeIeE8VRDj8NVEuXvCV3YHd2jmRkxaG9NisCUjPbLCdH7TkbHvAPXx3s10J/file';
-audio.volume = 0.2;
+      audio.volume = 0.2;
      
        
        audio.currentTime = 0;
       audio.play(); 
        
-       document.querySelector('svg').style.animationName = 'lightning';
-      document.querySelector('svg').addEventListener('animationend', function(){
-        document.querySelector('svg').style.animationName = 'thunder';
+       document.querySelector('.svgt svg').style.animationName = 'lightning';
+      document.querySelector('.svgt svg').addEventListener('animationend', function(){
+        document.querySelector('.svgt svg').style.animationName = 'thunder';
         
       });
      // width of target element

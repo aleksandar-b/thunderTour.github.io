@@ -5,7 +5,19 @@
   z-index:9999;
   }
 
-
+.svghed{
+text-align: center;
+  
+  width:100%;
+  margin-top: 9px;
+  padding:2px;
+  
+  animation-name: thunder;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+    animation-iteration-count: 1;
+    
+}
 
 
 .svgt svg{
