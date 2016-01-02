@@ -173,18 +173,22 @@ var triangle = '<div class="triangle'+side+'"></div>';
      for(var i = 0; i<arguments[0].steps.length; i++){
        circles += '<div data-index="'+i+'" class="krug"></div>';
      }
-     
-     
 
+     
+var svg = '<div class="svgt"><svg version="1.1" class="" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.191px" height="29.535px" viewBox="0 0 17.191 29.535" enable-background="new 0 0 17.191 29.535" xml:space="preserve"><polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FCCF0F" points="17.191,0 1.438,15.457 6.365,15.466 0,29.535 17.166,12.907 11.773,12.661 "></polygon></svg></div>';
    var ht = '<div class="clear"></div><button class="next">Next</button><div>'+circles+'</div>';
      
    //main content plus triangle and footer
 f.innerHTML ='<div class="popup">'+ content+triangle+ht+'</div>'; 
 
-     
+
+       
+
+      
      //append new div to body
 var h3 = document.getElementsByTagName('body')[0];
           h3.appendChild(f);
+
      
 if(counter === length-1){   
          document.getElementsByClassName('next')[0].innerHTML = 'Got it!';    
@@ -195,6 +199,44 @@ if(counter === length-1){
      
      document.getElementsByClassName('krug')[length-1-counter].style.background = '#00334D';
      
+       
+       
+       
+        /*  ============ Append SVG icon ============ */
+       
+     var polygon = '<polygon fill-rule="evenodd" clip-rule="evenodd" fill="#FCCF0F" points="17.191,0 1.438,15.457 6.365,15.466 0,29.535 17.166,12.907 11.773,12.661 "></polygon>'
+
+// Create a dummy receptacle
+var wrapper = document.createElement('div');
+wrapper.className = 'svgt';
+// Wrap the svg string to a svg object (string)
+var svgfragment = '<svg version="1.1" class="" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.191px" height="29.535px" viewBox="0 0 17.191 29.535" enable-background="new 0 0 17.191 29.535" xml:space="preserve" >' + polygon + '</svg>';
+// Add all svg to the receptacle
+wrapper.innerHTML = '' + svgfragment;
+
+[].forEach.call(wrapper.childNodes[0].childNodes, function(el){
+
+document.querySelector('.popup').appendChild(wrapper);
+
+}); 
+       
+       
+       
+       var audio = document.createElement('audio');
+       audio.className = 'thunderAudio';
+  document.getElementsByTagName('body')[0].appendChild(audio);
+audio.src ='https://dl.dropboxusercontent.com/content_link/g9PwefeIeE8VRDj8NVEuXvCV3YHd2jmRkxaG9NisCUjPbLCdH7TkbHvAPXx3s10J/file';
+audio.volume = 0.2;
+     
+       
+       audio.currentTime = 0;
+      audio.play(); 
+       
+       document.querySelector('svg').style.animationName = 'lightning';
+      document.querySelector('svg').addEventListener('animationend', function(){
+        document.querySelector('svg').style.animationName = 'thunder';
+        
+      });
      // width of target element
           var width = absolutePosR - absolutePosX;
    
@@ -271,6 +313,8 @@ document.getElementsByClassName('triangleleft')[0].style.top = (bottom-top)/2-8+
        document.getElementsByClassName('next')[0].addEventListener('click', function(){
        //remove popup 
 
+           
+           
        document.getElementsByClassName('popup')[0].remove();
        document.getElementsByClassName('div')[0].remove();
 

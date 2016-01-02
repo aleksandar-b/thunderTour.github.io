@@ -5,6 +5,59 @@
   z-index:9999;
   }
 
+
+
+
+.svgt svg{
+  float:left;
+  height:20px;
+  width:14px;
+  margin-top: 9px;
+  padding:2px;
+  
+  animation-name: thunder;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+.svgt svg:hover{
+      animation-iteration-count: infinite;
+
+  
+}
+
+@keyframes lightning{
+    0%, 20%, 40%, 60%, 80%, 100% {
+        opacity: 1;
+    }
+    10%, 30%, 50%, 70%, 90% {
+       opacity: 0;
+    }
+}
+
+@keyframes thunder{
+    0%, 20%, 40%, 60%, 80%, 100% {
+        
+        transform: rotate3d(0, 0, 1, -4.5deg);
+    }
+    10%, 30%, 50%, 70%, 90% {
+
+        transform: rotate3d(0, 0, 1, 4.5deg);
+         
+    }
+}
+@-webkit-keyframes thunder{
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: rotate3d(0, 0, 1, -4.5deg);
+        
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate3d(0, 0, 1, 4.5deg);
+       
+    }
+}
+
 .triangleleft{
   position:absolute;
   right:-11px;
@@ -100,15 +153,15 @@ margin-bottom: 6px;
 .popup{
 
   animation-fill-mode: both;
-    font-family: 'Source Code Pro' ;
- background-color: #005F8F;
-    width:268px;
+  font-family: 'Source Code Pro' ;
+  background-color: #005F8F;
+  width:268px;
   color: white;
   padding: 10px !important;
   padding-bottom:35px !important;
   font-size: 0.85em;
   border-radius: 4px;
-
+  will-change: opacity, transform;
   animation-name: fadeInLeft;
   animation-duration: 1s;
   animation-timing-function: ease-out;

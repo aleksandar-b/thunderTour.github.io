@@ -119,7 +119,6 @@ var triangle = '<div class="triangle'+side+'"></div>';
      
    //main content plus triangle and footer
 f.innerHTML ='<div class="popup">'+ content+triangle+ht; 
-
      
      //append new div to body
 var h3 = document.getElementsByTagName('body')[0];
