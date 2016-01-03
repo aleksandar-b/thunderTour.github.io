@@ -233,7 +233,7 @@ if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassNa
 		var wrapper = document.createElement('div');
 		wrapper.className = 'svgt';
 		// Wrap the svg string to a svg object (string)
-		var svgfragment = '<svg version="1.1" class="" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.191px" height="29.535px" viewBox="0 0 17.191 29.535" enable-background="new 0 0 17.191 29.535" xml:space="preserve" >' + polygon + '</svg>';
+		var svgfragment = '<svg version="1.1" class="" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.191px" height="24.535px" viewBox="0 0 17.191 29.535" enable-background="new 0 0 17.191 29.535" xml:space="preserve" >' + polygon + '</svg>';
 		// Add all svg to the receptacle
 		wrapper.innerHTML = '' + svgfragment;
 
@@ -248,7 +248,7 @@ if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassNa
        var audio = document.createElement('audio');
        audio.className = 'thunderAudio';
        document.getElementsByTagName('body')[0].appendChild(audio);
-       audio.src ='https://dl.dropboxusercontent.com/content_link/g9PwefeIeE8VRDj8NVEuXvCV3YHd2jmRkxaG9NisCUjPbLCdH7TkbHvAPXx3s10J/file';
+       audio.src ='http://docs.google.com/uc?export=open&id=0B1D2aKG2kithS2NJODNQd3ZwSDg';
        audio.volume = 0.2;
      
        
@@ -370,25 +370,49 @@ if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassNa
             if(absolutePos > window.innerHeight){
 				
 				 if (hasJquery) {
-					 document.getElementsByClassName('popup')[0].style.animationDelay = 700;
-              jQuery('body, html').animate({ scrollTop: absolutePos-window.innerHeight/2 }, 400);
-      
+					 //document.getElementsByClassName('popup')[0].style.animationDelay = 700;
+              jQuery('body, html').animate({ scrollTop: absolutePos-window.innerHeight/2 }, 400, function(){
+                  
+                  tour(arg, counter);
+              });
+      return;
                     }else{
 
                      window.scrollTo(0,absolutePos-window.innerHeight/2);
                       }
              }else{
-         
+                
+          if (hasJquery) {
+					 //document.getElementsByClassName('popup')[0].style.animationDelay = 700;
+              jQuery('body, html').animate({ scrollTop: 0 }, 400);
+      
+                    }else{
                window.scrollTo(0,0);
-         
+                    }
          }
        
          }else{
 			 
           //end popup and scroll to top
+             
+              if (hasJquery) {
+					 //document.getElementsByClassName('popup')[0].style.animationDelay = 700;
+                  
+              jQuery('body, html').animate({ scrollTop: 0 }, 400);
+                  
+              document.getElementsByClassName('popup')[0].remove();
+          document.getElementsByClassName('div')[0].remove();       
+                  
+          return;
+                    }else{
            window.scrollTo(0,0);
+                           document.getElementsByClassName('popup')[0].remove();
+          document.getElementsByClassName('div')[0].remove();
            return;
-          
+                    }
+             
+             
+             
           }
 
           //remove popup 
@@ -445,10 +469,6 @@ document.getElementsByClassName('startTour')[0].addEventListener('click', functi
        //remove popup 
 
 
-if(document.getElementsByClassName('popup')[0] &&  document.getElementsByClassName('div')[0]){
-       document.getElementsByClassName('popup')[0].remove();
-       document.getElementsByClassName('div')[0].remove();
-}
 
  Tour({
 
